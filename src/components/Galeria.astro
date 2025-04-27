@@ -1,0 +1,24 @@
+---
+import f01 from '../assets/images/f01.jpeg'
+import f02 from '../assets/images/f02.jpeg'
+import f03 from '../assets/images/f03.jpeg'
+import f04 from '../assets/images/f04.jpeg'
+import f05 from '../assets/images/f05.jpeg'
+import f06 from '../assets/images/f06.jpeg'
+import f07 from '../assets/images/f07.jpeg'
+import f08 from '../assets/images/f08.jpeg'
+
+const fotografia = [
+    f01,f02,f03,f04,f05,f06,f07,f08
+]
+---
+
+<section id="galeria" class="relative z-30 w-full xl:h-screen xl:max-h-[850px] flex justify-center items-center bg-white">
+       <article class="w-full h-full grid md:grid-cols-4 gap-3 p-3">
+        {fotografia.map((foto) => (
+            <div class="col-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover" src={foto.src} alt="Galería"/>
+            </div>
+        ))}
+       </article>
+</section>
