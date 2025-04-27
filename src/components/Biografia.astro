@@ -1,0 +1,32 @@
+---
+import Image from "astro/components/Image.astro"
+import Biography from "../assets/images/papa-francisco-home.png"
+---
+
+<section id="biografia" class="w-full xl:h-screen lg:max-h-[900px] flex justify-center items-center bg-[#010101]">
+    <article class="w-full h-full relative flex justify-end py-10 md:py-14 lg:py-20">
+        <div class="fixed z-10 top-0 md:-left-[25%] w-full h-full overflow-hidden">
+            <Image class=" w-full h-full object-cover object-right" src={Biography} alt={'Papa Francisco'}/>
+        </div>
+
+        <div class="absolute w-full h-full top-0 left-0 bg-black/30 z-20"></div>                
+
+        <div class="relative z-30 flex flex-col justify-center items-center w-11/12 md:w-9/12 lg:w-6/12 text-orange-900 bg-gradient-to-r from-orange-100/80 to-white p-5">
+            <div class="w-10/12 flex flex-col gap-2">
+                <h2 class="text-2xl font-bold">✟ Biografía ✟</h2>
+                <p>Jorge Mario Bergoglio nació el 17 de diciembre de 1936 en Buenos Aires, Argentina. Hijo de inmigrantes italianos, creció en un ambiente sencillo y muy ligado a la fe católica.
+                    <br><br>
+                    Desde joven, trabajó como técnico químico y también como portero y limpiador, antes de sentir su llamado al sacerdocio. Ingresó a la Compañía de Jesús (los jesuitas) en 1958 y fue ordenado sacerdote en 1969.
+                    <br><br>
+                    Se destacó por su humildad, su vida austera y su dedicación a los pobres y marginados. Con el tiempo, se convirtió en provincial de los jesuitas en Argentina y luego en arzobispo de Buenos Aires en 1998. Fue creado cardenal por el papa Juan Pablo II en el año 2001.
+                    <br><br>
+                    El 13 de marzo de 2013, fue elegido Papa, tomando el nombre de Francisco en honor a San Francisco de Asís, reflejando su deseo de una Iglesia humilde, cercana a los pobres y comprometida con la paz y el cuidado de la Creación. Se convirtió en el primer papa jesuita, el primero de América Latina y el primero en tomar ese nombre.
+                    <br><br>
+                    Durante su pontificado, ha sido conocido por su mensaje de misericordia, su apertura al diálogo interreligioso y su enfoque en temas como el medio ambiente, la inmigración y la justicia social.</p>
+            </div>
+            </div>
+        </div>
+
+    </article>
+      
+</section>

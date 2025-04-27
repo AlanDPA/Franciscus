@@ -1,0 +1,41 @@
+---
+//Buttons
+import Menu from '../assets/svg/menu.svg'
+---
+
+<div class="fixed top-0 left-0 z-50 bg-black/80 w-full flex flex-row justify-between items-center py-3 px-5">
+    <h1 class="font-bold text-3xl text-white cursor-default">✟ Francisco ✟</h1>
+
+<Menu class="block sm:hidden cursor-pointer" id={"menu"}/>
+<nav class="hidden sm:block bg-black absolute p-5 text-white top-20 right-5 rounded-lg sm:bg-transparent sm:relative sm:p-0 sm:top-0 sm:right-0" id="nav-bar">
+    <ul class="flex gap-5 flex-col sm:flex-row sm:w-full">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#biografia">Biografía</a></li>
+        <li><a href="">Legado</a></li>
+        <li><a href="">Galería</a></li>
+        <li><a href="">Testimonios</a></li>
+    </ul>
+</nav>
+</div>
+
+<script>
+    const menu = document.getElementById('menu')!
+
+    //nav-bar
+    const nav_bar = document.getElementById('nav-bar')!
+
+    window.addEventListener('resize', () => {
+        if(window.innerWidth > 640) {
+            nav_bar.style.display = 'block'
+        } else {
+            nav_bar.style.display = 'none'
+        }
+    })
+
+    if(menu) {
+        menu.addEventListener('click', () => {
+                nav_bar.style.display = nav_bar.style.display === 'block' ? 'none' : 'block' 
+ 
+        })
+    }
+</script>
