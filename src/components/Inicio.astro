@@ -1,30 +1,24 @@
 ---
 import Image from "astro/components/Image.astro"
-import Reino_Cielos from "../assets/images/Reino_de_los_Cielos.png"
+import Francisco from "../assets/images/PapaFrancisco.jpg"
+import Abrazo from "../assets/images/abrazo_Jesus_Franciscus.jpg"
 ---
 
-<section id="inicio" class="relative z-30 w-full xl:h-screen xl:max-h-[850px] bg-gradient-to-r from-orange-100 to-white flex flex-col lg:flex-row max-lg:justify-center lg:items-center lg:py-20">
-            <div class="absolute z-20 w-full h-full top-0 left-0 bg-gradient-to-r from-orange-100/50 from-60% to-black/50"></div>
-            <div class="relative z-30 bg-black/80 text-white p-5 lg:max-w-[800px] w-full lg:w-7/12 h-full flex flex-col justify-center items-center lg:ml-10">
-                <div class="w-full lg:w-10/12 flex flex-col gap-2">
-                    <h2 class="text-2xl font-bold">✟ Dedicatoria ✟</h2>
-        <p>La mañana del lunes 21 de abril de 2025, lo primero que supe fue sobre la muerte del Papa Francisco. En un primer momento no me sentí afligido, tal vez porque aún no era consciente de su importancia… porque siempre hay muerte en el mundo.
-            <br><br>
-            Sin embargo, a medida que avanzaba el día, me fui encontrando con transmisiones en vivo y videos en YouTube —una plataforma en la que consumo mucho contenido cristiano—, todos hablando sobre el mismo tema: el fallecimiento del Papa Francisco. Las reacciones eran múltiples. Muchas reflejaban un profundo dolor; otras, en cambio, estaban llenas de optimismo y alegría, con la esperanza de que el Papa Francisco ahora se encuentra en un lugar mejor: en el Reino de los Cielos, junto a nuestro Señor.
-            <br><br>
-            Alcanzar la santidad, creo, es el nivel espiritual más difícil de lograr, sobre todo si no conocemos a Dios. Pero el simple hecho de anhelarla ya se siente gratificante, y más aún cuando ese anhelo está acompañado de buenas acciones, como las que siempre marcaron la vida del Papa Francisco.
-            <br><br>
-            Con un cúmulo de emociones —entre la tristeza y la felicidad por lo que le ha sucedido— escribo esta dedicatoria para aquellos que no lo conocieron y para quienes deseen saber más sobre él. Esta landing page está hecha en su honor.</p>
-                </div>
-            </div>
+<header id="inicio" class="relative z-30 w-full flex flex-col items-end min-h-[700px] h-screen max-h-[850px]">
+    <div class="absolute z-20 w-full h-full top-0 left-0 opacity-50 bg-gradient-to-b from-black from-5% to-95% to-transparent"></div>
+    <div class="absolute z-10 w-full h-full top-0 left-0">
+        <Image class="w-full h-full transition ease-in-out duration-150 delay-100 object-cover sm:object-top-left" src={Francisco} alt={'Papa Francisco'}/>
+    </div>
 
-        <div class="relative lg:absolute z-10 top-0 right-0 h-full m-h-[750px] w-full lg:w-8/12 overflow-hidden">
-                <Image class="w-full h-full object-cover" src={Reino_Cielos} alt={"Reino de los Cielos"}/>
+    <div class="relative z-30 w-full py-10 h-full flex flex-col items-end justify-end">
 
-                    <h3 class="absolute bottom-5 right-0 px-4 py-2 text-lg xl:text-2xl text-white text-center italic font-light bg-black w-auto">"En la Iglesia hay lugar para todos. ¡Todos, todos, todos!"</h3>
+            <Image class="px-5 hidden lg:block fill-cyan-500 drop-shadow-lg drop-shadow-cyan-500/50" src={Abrazo} alt={"Abrazo entre Jesús y Francisco"}/>
+
+        <div class="text-white text-3xl ml-5 text-left backdrop-blur-sm bg-black/50 px-4 py-2">
+            <h2 class="text-2xl italic font-light">"La misericordia es el primer atributo de Dios. Es su nombre."</h2>
+            <h2 class="text-lg mt-2 text-right font-normal">— Papa Francisco, 2016</h2>
         </div>
-</section>
+    </div>
+</header>
 
-<script>
 
-</script>

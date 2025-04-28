@@ -1,11 +1,82 @@
 ---
+const valores = [
+    {nombre:'Humildad', descripcion:'Desde el inicio de su pontificado, eligió vivir en la residencia de Casa Santa Marta en lugar del tradicional Palacio Apostólico, demostrando su sencillez y cercanía con la gente.'},
+    {nombre:'Fe inquebrantable', descripcion:'Su profunda espiritualidad lo llevó a enfrentar desafíos con esperanza y confianza en Dios, animando a los fieles a no perder la fe en tiempos difíciles.'},
+    {nombre:'Amor al Prójimo', descripcion:'Abogó constantemente por los marginados, migrantes y pobres, recordando que "el amor es más fuerte que el odio" .'},
+    {nombre:'Generosidad', descripcion:'Promovió una Iglesia abierta y generosa, invitando a compartir con los demás y a vivir con sencillez.'},
+    {nombre:'Alegría en el servicio', descripcion:'Su sonrisa y buen humor fueron constantes, incluso en momentos de adversidad, mostrando que el servicio a los demás es fuente de alegría.'},
+]
 
+const gestos = [
+    'Visitó barrios humildes y cárceles, llevando consuelo y esperanza a quienes más lo necesitaban.',
+    'Durante su visita a la isla de Lampedusa, denunció la "globalización de la indiferencia" hacia los migrantes que arriesgan sus vidas buscando un futuro mejor.',
+    'Implementó reformas en la Curia Romana para hacerla más transparente y eficiente, enfrentando resistencias internas con valentía.'
+]
+
+const frases = [
+    'La verdadera fuerza reside en la humildad y en el servicio a los demás.',
+    'Sean constructores de puentes, no de muros.',
+    'No se cansen de hacer el bien. El bien siempre vence al mal.'
+]
 ---
 
-<section id="legado" class="relative z-30 w-full xl:h-screen xl:max-h-[850px] flex justify-center items-center bg-[#010101]">
-    <article class="w-full h-full relative flex justify-center xl:justify-end">
-       
+<section id="legado" class="relative z-30 w-full flex justify-center items-center text-orange-900 bg-white py-10">
+    
+    <article class="w-full h-full relative flex flex-col px-3 gap-5">
+       <h2 class="text-2xl font-bold">✟ Legado ✟</h2>
 
+       <div class="w-full h-full grid md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-3 items-baseline">
+            <div class="flex flex-col bg-gradient-to-r from-orange-100 to-white rounded-2xl shadow-2xl">
+                <div class="p-5 flex flex-col gap-3">
+                    <p>El legado de Papa Francisco trasciende su tiempo como líder de la Iglesia Católica. Su vida fue un testimonio de humildad, servicio y amor incondicional hacia los más necesitados.</p>
+                    <h3 class="font-bold text-lg">Los valores que nos dejó</h3>
+                    <ul class="list-none flex flex-col gap-3">
+                        {valores.map((valor) => (
+                          <li class="relative pl-6 before:content-['✟'] before:absolute before:left-0 before:top-0"><span class="font-bold">{valor.nombre}</span>
+                          <br/>
+                          <p>{valor.descripcion}</p>
+                          </li>
+                        ))}
+                      </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-gradient-to-r from-orange-100 to-white rounded-2xl shadow-2xl">
+                <div class="p-5 flex flex-col gap-3">
+                    <h3 class="font-bold text-lg">Gestos que no olvidamos</h3>
+                    <ul class="list-none flex flex-col gap-3">
+                        {gestos.map((gesto => (
+                            <li class="relative pl-6 before:content-['✟'] before:absolute before:left-0 before:top-0">{gesto}</li>
+                        )))}
+                    </ul>
+                    <h3 class="font-bold text-lg">Sus palabras viven en nosotros</h3>
+    
+                    <ul class="list-none flex flex-col gap-3">
+                        {frases.map((frase) => (
+                          <li class="relative pl-6 before:content-['✟'] before:absolute before:left-0 before:top-0">{frase}
+                          </li>
+                        ))}
+                      </ul>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 xl:col-span-1 flex flex-col bg-gradient-to-r from-orange-100 to-white rounded-2xl shadow-2xl">
+                <div class="p-5 flex flex-col gap-3">
+                    <h3 class="font-bold text-lg">Una vida celebrada en todo el mundo</h3>
+                    <p>El legado del Papa Francisco trascendió fronteras y culturas, siendo reconocido y celebrado a nivel global. Durante su pontificado, visitó decenas de países, llevando mensajes de esperanza, paz y justicia social. Su compromiso con temas como el calentamiento global, la migración y el rol de la mujer resonó en diversas naciones y comunidades.
+                        <br><br>
+                        Tras su fallecimiento, líderes internacionales, jefes de Estado y representantes de diversas religiones expresaron su admiración y respeto por su labor. El funeral en la Plaza de San Pedro congregó a más de 250,000 personas, incluyendo monarcas y líderes religiosos, reflejando la magnitud de su influencia y el cariño que inspiró en todo el mundo.
+                    </p>
+                </div>
+    
+                <div class="p-5 flex flex-col gap-3">
+                    <h3 class="font-bold text-lg">Un legado que inspira generaciones</h3>
+                    <p>El Papa Francisco dejó una huella imborrable en la historia contemporánea. Su visión de una Iglesia cercana, comprometida con los más necesitados y defensora de la dignidad humana continúa inspirando a millones. A través de sus encíclicas, como Laudato Si’ y Fratelli Tutti, promovió una "conversión ecológica" y una fraternidad universal, llamando a la acción conjunta por un mundo más justo y solidario. 
+                        <br><br>
+                        Su legado vive en cada gesto de compasión, en cada esfuerzo por la paz y en cada lucha por la justicia social. Nos dejó el desafío de continuar su misión, construyendo puentes de diálogo y promoviendo una cultura del encuentro.
+                    </p>
+                </div>
+            </div>
+       </div>
     </article>
-      
 </section>

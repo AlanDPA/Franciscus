@@ -13,10 +13,11 @@ const fotografia = [
 ]
 ---
 
-<section id="galeria" class="relative z-30 w-full xl:h-screen xl:max-h-[850px] flex justify-center items-center bg-white">
-       <article class="w-full h-full grid md:grid-cols-4 gap-3 p-3">
+<section id="galeria" class="relative z-30 w-full xl:h-screen xl:max-h-[850px] flex flex-col gap-5 justify-center items-baseline bg-white py-10">
+    <h2 class="text-2xl font-bold pl-3 text-orange-900">✟ Galería ✟</h2>
+       <article class="w-full h-full grid md:grid-cols-2 xl:grid-cols-4 gap-3 p-3">
         {fotografia.map((foto) => (
-            <div class="col-span-1 overflow-hidden">
+            <div class="col-span-1 max-h-[300px] xl:max-h-[500px] overflow-hidden">
                 <img class="w-full h-full object-cover" src={foto.src} alt="Galería"/>
             </div>
         ))}
